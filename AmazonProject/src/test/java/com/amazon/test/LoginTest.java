@@ -8,7 +8,7 @@ import com.amazon.pages.LoginPage;
 
 public class LoginTest extends BaseTest
 {
-	
+	// Hello
 	@Test
 	public void LoginPageTitle()
 	{
