@@ -1,6 +1,10 @@
 package com.amazon.test;
 
+import java.io.IOException;
+
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.amazon.base.BaseTest;
@@ -8,24 +12,44 @@ import com.amazon.pages.LoginPage;
 
 public class LoginTest extends BaseTest
 {
-	// Hello
-	@Test
-	public void LoginPageTitle()
+	
+	public LoginTest() throws IOException
 	{
-		String title = LoginPage.validatePageTitle();
-		Assert.assertEquals(title, "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in");
+		super();
+	}
+	
+	@BeforeMethod
+	public void setUp() throws IOException
+	{
+		Before();
+		login = new LoginPage();
+		
 	}
 	
 	@Test
-	public void LoginLogo()
+	public void logoTest()
 	{
-		boolean logo = LoginPage.validateLogo();
-		Assert.assertTrue(logo);
+		login.validateLogo();	
 	}
 	
 	@Test
-	public void LoginSearch()
+	public void loginTitle() 
 	{
-		LoginPage.enterItem();
+		String title=login.validateLoginPageTitle();
+		System.out.println(title);
+		Assert.assertEquals(title, "Google");
 	}
+	
+	@Test
+	public void searchSubmit() throws IOException
+	{
+		login.SearchItem(prop.getProperty("Prod1"));
+	}
+	
+	@AfterMethod
+	public void tearDown()
+	{
+		driver.quit();
+	}
+	
 }

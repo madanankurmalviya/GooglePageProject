@@ -1,5 +1,7 @@
 package com.amazon.pages;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -8,47 +10,56 @@ import com.amazon.base.BaseTest;
 
 public class LoginPage extends BaseTest
 {
-	//Page Factory 
-	@FindBy(name = "username")
-	static
-	WebElement username;
 	
-	@FindBy(name = "username1")
-	WebElement username1;
+	                         //Page Factory OR
 	
-	@FindBy (xpath = ".//input[@id='twotabsearchtextbox']")
-	static
-	WebElement search;
+	@FindBy(name="q")
+	WebElement search ;
 	
-	@FindBy (xpath = ".//span[@class='nav-sprite nav-logo-base']")
-	static
+	@FindBy(xpath="(.//input[@name='btnK'])[1]")
+	WebElement btn;
+	
+	@FindBy(xpath=".//img[@alt='Google']")
 	WebElement logo;
 	
-	@FindBy (xpath = ".//input[@type='submit'   and  @value ='Go']")
-	static
-	WebElement click;
+	@FindBy(xpath =".//a[@class = 'NKcBbd']")
+	WebElement link;
 	
-	// initialize the page object
 	
-	public LoginPage()
+	
+	                        //Initialize the objects
+	
+	
+	public LoginPage() throws IOException
 	{
 		PageFactory.initElements(driver, this);
 	}
 	
-	//Actions
-	public static String validatePageTitle()
+	
+	
+						    //Actions
+	
+	public String validateLoginPageTitle()
 	{
 		return driver.getTitle();
 	}
 	
-	public static boolean validateLogo()
+	public boolean validateLogo()
 	{
 		return logo.isDisplayed();
 	}
 	
-	public static void enterItem()
+	public GoogleSecondPage SearchItem(String Prod1) throws IOException 
 	{
-		search.sendKeys("ear Phone");
-		click.click();
+		search.sendKeys(Prod1);
+		btn.click();
+		
+		return new GoogleSecondPage();
 	}
+	
+	
+	
+	
+	
+	
 }
