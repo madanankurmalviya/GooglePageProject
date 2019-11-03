@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.amazon.test.GoogleSecondPageTest">
+      <class name="com.amazon.test.LoginTest">
         <methods>
-          <include name="verifySecondPageStatusTest"/>
-          <include name="tearDown"/>
+          <include name="searchSubmit"/>
+          <include name="logoTest"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.amazon.test.GoogleSecondPageTest -->
+      </class> <!-- com.amazon.test.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

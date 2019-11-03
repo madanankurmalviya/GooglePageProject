@@ -12,6 +12,7 @@ import com.amazon.pages.GoogleSecondPage;
 import com.amazon.pages.LoginPage;
 import com.amazon.pages.NewsPage;
 import com.amazon.pages.videoPage;
+import com.amazon.utilities.Utils;
 
 public class GoogleSecondPageTest extends BaseTest 
 {
@@ -20,7 +21,7 @@ public class GoogleSecondPageTest extends BaseTest
 	videoPage video;
 	NewsPage news;
 	public GoogleSecondPageTest() throws IOException 
-	{
+	{ 
 		super();
 	}
 	
@@ -43,20 +44,20 @@ public class GoogleSecondPageTest extends BaseTest
 		Assert.assertEquals(title, "Ankur Malviya - Google Search", "Title not matched - ankur malviya ");
 	}
 	//
-	@Test (enabled = false)
+	@Test 
 	public void verifyLogoDisplayedTest() 
 	{
 		boolean flag = secondPage.googleSecondPageImage();
 		Assert.assertTrue(flag);
 	}
 	
-	@Test (enabled = false)
+	@Test 
 	public void verifyVideoLinkVerifyTest() throws IOException
 	{
 		video= secondPage.clickOnVideoLink();
 	}
 	
-	@Test(enabled=false)
+	@Test
 	public void verifyNewsPageLink() throws IOException
 	{
 		news = secondPage.clickOnNewsPage();
@@ -70,8 +71,20 @@ public class GoogleSecondPageTest extends BaseTest
 		Assert.assertNotNull(status);
 	}
 	
+	@Test
+	public void verifyLocationTest()
+	{
+		Assert.assertTrue(secondPage.verifyLocation());
+	}
 	
 	
+	@Test
+	public void verifyMicLinkTest()
+	{
+		secondPage.verifyVoiceLink();
+		Utils.managePopup();
+		Assert.assertTrue(secondPage.micImage());
+	}
 	
 	@AfterMethod
 	public void tearDown()

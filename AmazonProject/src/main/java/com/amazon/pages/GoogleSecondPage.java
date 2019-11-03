@@ -18,7 +18,7 @@ public class GoogleSecondPage extends BaseTest
 	@FindBy(xpath="(.//a[@class='q qs'])[1]")
 	WebElement videoLink;
 	
-	@FindBy(xpath="(.//a[@class='q qs'])[2]")
+	@FindBy(xpath=".//a[text()='News']")
 	WebElement newsLink;
 	
 	@FindBy(xpath="(.//a[@class='q qs'])[3]")
@@ -30,15 +30,25 @@ public class GoogleSecondPage extends BaseTest
 	@FindBy(xpath=".//span[@class='hb2Smf']")
 	WebElement voiceSearchLink;
 	
+	@FindBy(id="spchb")
+	WebElement imageMic;
+	
 	@FindBy(id="resultStats")
 	WebElement status;
+	
+	@FindBy(xpath=".//span[contains(text(),'Bengaluru')]")
+	WebElement location;
+	
+	@FindBy(xpath=".//a[text()='Images']")
+	static
+	
+	WebElement imagep;
 			
 	
 	//Initialization of Objects
 		public GoogleSecondPage() throws IOException {
 			PageFactory.initElements(driver, this);
 		}
-		
 		
 	//Actions
 	
@@ -48,10 +58,19 @@ public class GoogleSecondPage extends BaseTest
 		
 	}
 	
+	
+	
 	public boolean googleSecondPageImage()
 	{
 		boolean img = imageLink.isDisplayed();
 		return img;
+	}
+	
+	
+	public imagePage googleImageLinkClick() throws IOException
+	{
+		imagep.click();
+		return new imagePage();
 	}
 	
 	public videoPage clickOnVideoLink() throws IOException
@@ -71,5 +90,18 @@ public class GoogleSecondPage extends BaseTest
 		return status.getText();
 	}
 	
+	public boolean verifyLocation()
+	{
+		return 	location.isDisplayed();
+	}
 	
+	public boolean micImage()
+	{
+		return imageMic.isDisplayed();
+	}
+	
+	public void verifyVoiceLink()
+	{
+		voiceSearchLink.click();
+	}
 }
