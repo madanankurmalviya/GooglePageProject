@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name= "Google Page  Project" >
+	<test name = "Google Page  Project Test" >
+			<classes>
+				<class name ="com.google.test.GoogleSecondPageTest"></class>
+				<class name ="com.google.test.imagePageTest"></class>
+				<class name ="com.google.test.LoginTest"></class>		
+				<class name ="com.google.test.NewsPageTest"></class>
+				<class name ="com.google.test.videoPageTest"></class>
+			</classes>
+		</test>
+</suite>

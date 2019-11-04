@@ -2,36 +2,36 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="27352" started-at="2019-11-03T15:07:58Z" finished-at="2019-11-03T15:08:25Z">
+  <suite name="Default suite" duration-ms="43081" started-at="2019-11-04T22:02:23Z" finished-at="2019-11-04T22:03:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="27352" started-at="2019-11-03T15:07:58Z" finished-at="2019-11-03T15:08:25Z">
-      <class name="com.amazon.test.NewsPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.amazon.test.NewsPageTest@6ea6d14e]" name="setUp" is-config="true" duration-ms="14305" started-at="2019-11-03T20:37:58Z" finished-at="2019-11-03T20:38:12Z">
+    <test name="Default test" duration-ms="43081" started-at="2019-11-04T22:02:23Z" finished-at="2019-11-04T22:03:06Z">
+      <class name="com.google.test.NewsPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.google.test.NewsPageTest@6ea6d14e]" name="setUp" is-config="true" duration-ms="27002" started-at="2019-11-05T03:32:23Z" finished-at="2019-11-05T03:32:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyBottomMessageTest()[pri:0, instance:com.amazon.test.NewsPageTest@6ea6d14e]" name="verifyBottomMessageTest" duration-ms="75" started-at="2019-11-03T20:38:12Z" finished-at="2019-11-03T20:38:12Z">
+        <test-method status="PASS" signature="verifyBottomMessageTest()[pri:0, instance:com.google.test.NewsPageTest@6ea6d14e]" name="verifyBottomMessageTest" duration-ms="101" started-at="2019-11-05T03:32:50Z" finished-at="2019-11-05T03:32:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyBottomMessageTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.amazon.test.NewsPageTest@6ea6d14e]" name="tearDown" is-config="true" duration-ms="2313" started-at="2019-11-03T20:38:12Z" finished-at="2019-11-03T20:38:14Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.google.test.NewsPageTest@6ea6d14e]" name="tearDown" is-config="true" duration-ms="1038" started-at="2019-11-05T03:32:50Z" finished-at="2019-11-05T03:32:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.amazon.test.NewsPageTest@6ea6d14e]" name="setUp" is-config="true" duration-ms="8270" started-at="2019-11-03T20:38:14Z" finished-at="2019-11-03T20:38:23Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.google.test.NewsPageTest@6ea6d14e]" name="setUp" is-config="true" duration-ms="12314" started-at="2019-11-05T03:32:51Z" finished-at="2019-11-05T03:33:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyBottomNameTest()[pri:0, instance:com.amazon.test.NewsPageTest@6ea6d14e]" name="verifyBottomNameTest" duration-ms="57" started-at="2019-11-03T20:38:23Z" depends-on-methods="com.amazon.test.NewsPageTest.verifyBottomMessageTest" finished-at="2019-11-03T20:38:23Z">
+        <test-method status="PASS" signature="verifyBottomNameTest()[pri:0, instance:com.google.test.NewsPageTest@6ea6d14e]" name="verifyBottomNameTest" duration-ms="53" started-at="2019-11-05T03:33:04Z" depends-on-methods="com.google.test.NewsPageTest.verifyBottomMessageTest" finished-at="2019-11-05T03:33:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyBottomNameTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.amazon.test.NewsPageTest@6ea6d14e]" name="tearDown" is-config="true" duration-ms="2316" started-at="2019-11-03T20:38:23Z" finished-at="2019-11-03T20:38:25Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.google.test.NewsPageTest@6ea6d14e]" name="tearDown" is-config="true" duration-ms="2561" started-at="2019-11-05T03:33:04Z" finished-at="2019-11-05T03:33:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.amazon.test.NewsPageTest -->
+      </class> <!-- com.google.test.NewsPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
